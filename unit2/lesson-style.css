@@ -1,0 +1,223 @@
+/* ===============================
+   LESSON STYLE SHEET
+   สำหรับบทเรียนออนไลน์ nitigon.cmtc.ac.th
+   =============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    color: #2c3e50;
+    background: #f5f7fa;
+    padding: 20px;
+}
+
+/* ---------- โครงสร้างหลัก ---------- */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+/* ---------- ส่วนหัวบทเรียน ---------- */
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.header .subtitle {
+    font-size: 1.4em;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+}
+
+/* ---------- เนื้อหาหลัก ---------- */
+
+.content {
+    padding: 50px 40px;
+}
+
+.chapter-intro {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border-left: 5px solid #667eea;
+}
+
+.chapter-intro p {
+    font-size: 1.1em;
+    color: #34495e;
+}
+
+h2 {
+    color: #667eea;
+    font-size: 2.2em;
+    margin: 40px 0 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background: #764ba2;
+}
+
+h3 {
+    color: #764ba2;
+    font-size: 1.7em;
+    margin: 30px 0 15px 0;
+    padding-left: 20px;
+    border-left: 4px solid #764ba2;
+}
+
+h4 {
+    color: #555;
+    font-size: 1.3em;
+    margin: 20px 0 10px 0;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 1.05em;
+}
+
+/* ---------- กล่องเน้น ---------- */
+
+.highlight-box {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border-left: 5px solid #e17055;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-box {
+    background: linear-gradient(135deg, #dfe6e9 0%, #b2bec3 100%);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border-left: 5px solid #74b9ff;
+}
+
+.success-box {
+    background: linear-gradient(135deg, #55efc4 0%, #00b894 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 25px 0;
+    box-shadow: 0 5px 15px rgba(0,184,148,0.3);
+}
+
+/* ---------- กล่องโค้ด ---------- */
+
+.code-block {
+    background: #2d3436;
+    color: #a8e6cf;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95em;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.code-block code {
+    color: #a8e6cf;
+}
+
+/* ---------- รายการ ---------- */
+
+ul, ol {
+    margin: 20px 0 20px 40px;
+}
+
+li {
+    margin: 12px 0;
+    line-height: 1.7;
+}
+
+/* ---------- เส้นแบ่งตอน ---------- */
+
+.section-divider {
+    height: 3px;
+    background: linear-gradient(to right, #667eea, #764ba2, #667eea);
+    margin: 50px 0;
+    border-radius: 2px;
+}
+
+/* ---------- ตัวหนา ---------- */
+
+strong {
+    color: #e17055;
+    font-weight: 600;
+}
+
+/* ---------- ส่วนท้าย ---------- */
+
+.footer {
+    background: #2d3436;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    .content {
+        padding: 30px 20px;
+    }
+}
